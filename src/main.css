@@ -1,0 +1,49 @@
+* {
+  text-transform: none;
+  letter-spacing: 0px;
+  box-sizing: border-box;
+}
+.claimHeader {
+  background-color: #f7f7f7;
+  border: 1px solid #efeef4;
+  display: flex;
+  align-items: center;
+  height: 50px !important;
+}
+.claimNumber {
+  color: #10242b;
+  font-size: 16px;
+  font-weight: bold;
+}
+.newClaim {
+  color: #d1121b;
+  font-size: 16px;
+  font-weight: bold;
+}
+.viewDetails {
+  color: #23b1a9;
+  font-size: 12px;
+  font-weight: 500;
+  height: 14px;
+}
+.pageHeader {
+  color: #10242b;
+  /* font-size: 16px; */
+}
+
+.form-group {
+  width: 272px;
+  margin: 0px 8px;
+}
+.form-label {
+  font-size: 10px;
+  height: 13px;
+  text-transform: capitalize;
+  font-weight: bold;
+  color: #4c4c4c;
+}
+.required {
+  font-size: 10px;
+  font-weight: bold;
+  height: 13px;
+}
