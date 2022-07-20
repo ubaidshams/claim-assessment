@@ -3,7 +3,10 @@
     <v-simple-table height="500">
       <thead class="">
         <tr>
-          <th v-for="header in tableHeader" :key="header">{{ header }}</th>
+          <th v-for="header in tableHeader" :key="header">
+            {{ header.value }} &nbsp;
+            <span v-if="header.required" style="color: red">*</span>
+          </th>
         </tr>
       </thead>
       <tbody>
@@ -111,14 +114,14 @@
           <td></td>
         </tr>
         <tr>
-          <td>Repair, Repacking,Reprocessing etc.</td>
+          <td>Repair, Repacking, Reprocessing etc.</td>
           <td>25,00,000</td>
           <td>16,25,123</td>
           <td>25,23,178</td>
           <td></td>
         </tr>
         <tr>
-          <td>Additional Freigh/Incidentals</td>
+          <td>Additional Freight/Incidentals</td>
           <td>25,00,000</td>
           <td>16,25,123</td>
           <td>25,23,178</td>
@@ -207,11 +210,11 @@ export default {
   data() {
     return {
       tableHeader: [
-        "Indemnity Details",
-        "Assessed Amount (Foreign Currency)",
-        "Assessed Amount (INR)  *",
-        "Total INR Admissable Amount  *",
-        "Action",
+        { value: "Indemnity Details", required: false },
+        { value: "Assessed Amount (Foreign Currency)", required: false },
+        { value: "Assessed Amount (INR)", required: true },
+        { value: "Total INR Admissable Amount ", required: true },
+        { value: "Action ", required: false },
       ],
       dropdownTable: "",
     };
@@ -242,6 +245,6 @@ button {
 .required {
   font-weight: 600 !important;
   font-size: 14px !important;
-  color: #999 !important;
+  color: red !important;
 }
 </style>

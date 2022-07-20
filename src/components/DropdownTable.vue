@@ -16,7 +16,8 @@
       <thead class="cyan">
         <tr>
           <th v-for="header in tableHeader" :key="header">
-            {{ header }}
+            {{ header.value
+            }}<span v-if="header.required" style="color: red">&nbsp;*</span>
           </th>
         </tr>
       </thead>
@@ -151,12 +152,11 @@ export default {
   data() {
     return {
       tableHeader: [
-        "Category of Assessed Amount *",
-        "Commodity  *",
-        "Quantity *",
-        "Rate *",
-        "Total Amount *",
-        "Action",
+        { value: "Category of Assessed Amount ", required: true },
+        { value: "Commodity", required: true },
+        { value: "Rate", required: true },
+        { value: "Total Amount", required: true },
+        { value: "Action", required: false },
       ],
       categoryOfAssessedAmount: "",
       commodity: "",
@@ -195,7 +195,7 @@ export default {
     },
     handleAddRow() {
       this.tableData.push(this.getCurrentData);
-      this.$emit("newDataAdd",this.totalAmount)
+      this.$emit("newDataAdd", this.totalAmount);
       this.categoryOfAssessedAmount = "";
       this.quantity = "";
       this.commodity = "";

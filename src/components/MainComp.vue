@@ -156,7 +156,7 @@
 
         <v-flex class="form-group" style="margin-right: 300px">
           <label class="form-label">
-            <b>Agreed Value </b>&nbsp;<span class="required"> % *</span></label
+            <b>Agreed Value %</b>&nbsp;<span class="required"> *</span></label
           >
           <v-text-field
             class="input"
@@ -220,6 +220,6 @@ export default {
 .required {
   font-weight: 600 !important;
   font-size: 14px !important;
-  color: #999 !important;
+  color: red !important;
 }
 </style>
