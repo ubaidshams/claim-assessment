@@ -23,8 +23,10 @@
         </tr>
         <tr v-show="dropdownTable == 'Leakage'">
           <td colspan="5">
-              
-            <dropdown-table :handleDropdown="handleDropdown" @newDataAdd="handleNewData"  />
+            <dropdown-table
+              :handleDropdown="handleDropdown"
+              @newDataAdd="handleNewData"
+            />
           </td>
         </tr>
         <tr>
@@ -88,21 +90,21 @@
           </td>
         </tr>
         <tr>
-          <td>Total*</td>
+          <td>Total<span class="required">*</span></td>
           <td></td>
           <td></td>
           <td>25,23,178</td>
           <td></td>
         </tr>
         <tr>
-          <td>Agreed Value Amount*</td>
+          <td>Agreed Value Amount <span class="required">*</span></td>
           <td></td>
           <td></td>
           <td>25,23,178</td>
           <td></td>
         </tr>
         <tr>
-          <td>Gross Total*</td>
+          <td>Gross Total <span class="required">*</span></td>
           <td>25,00,000</td>
           <td></td>
           <td>25,23,178</td>
@@ -130,7 +132,7 @@
           <td></td>
         </tr>
         <tr>
-          <td>Total Indemnity Amount (A)*</td>
+          <td>Total Indemnity Amount (A) <span class="required">*</span></td>
           <td></td>
           <td></td>
           <td>25,23,178</td>
@@ -165,28 +167,28 @@
           <td></td>
         </tr>
         <tr>
-          <td>Total Payable Amount*</td>
+          <td>Total Payable Amount <span class="required">*</span></td>
           <td></td>
           <td></td>
           <td>25,23,178</td>
           <td></td>
         </tr>
         <tr>
-          <td>Amount Held*</td>
+          <td>Amount Held <span class="required">*</span></td>
           <td></td>
           <td></td>
           <td>25,23,178</td>
           <td></td>
         </tr>
         <tr>
-          <td>Held %*</td>
+          <td>Held % <span class="required">*</span></td>
           <td></td>
           <td></td>
           <td>25,23,178</td>
           <td></td>
         </tr>
         <tr>
-          <td>Net Amount Payable*</td>
+          <td>Net Amount Payable <span class="required">*</span></td>
           <td></td>
           <td></td>
           <td>25,23,178</td>
@@ -236,5 +238,10 @@ th {
 }
 button {
   color: #2d21b2 !important;
+}
+.required {
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  color: #999 !important;
 }
 </style>
